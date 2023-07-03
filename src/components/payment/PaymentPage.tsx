@@ -141,8 +141,8 @@ const PaymentPage = () => {
                         year={new Date().getFullYear()}
                         required={true}
                         defaultValue="MM"
-                        value={1}
-                        numeric={false}
+                        value={date.month}
+                        numeric={true}
                         onChange={(month: any) => {
                           setDate((prev) => ({ ...prev, month }));
                         }}
@@ -160,7 +160,7 @@ const PaymentPage = () => {
                         defaultValue={"YYYY"}
                         start={2023}
                         end={2099}
-                        value={2023}
+                        value={date.year}
                         required
                         onChange={(year: any) => {
                           setDate((prev) => ({ ...prev, year }));
